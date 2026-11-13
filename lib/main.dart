@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Pizzas',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -27,12 +28,11 @@ class MyApp extends StatelessWidget {
         // restart instead.
         //
         // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        // tested with just a hot reload.47u=        //colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+         primarySwatch: Colors.lightGreen,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
+      home: const MyHomePage(title: 'Pizzas'),
+    ); }
 }
 
 class MyHomePage extends StatefulWidget {
@@ -84,6 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        actions: <Widget>[
+          Icon(Icons.pix), 
+        ],
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -109,6 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text('venha coneçer a pizzaria mais gostosa da cidade'),
           ],
         ),
       ),
